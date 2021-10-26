@@ -27,10 +27,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UBI-7h-ynB">
-                                <rect key="frame" x="20" y="134" width="374" height="31"/>
+                                <rect key="frame" x="38" y="134" width="338" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ji6-bL-Ee9"/>
-                                    <constraint firstAttribute="width" constant="370" id="szs-BF-2lv"/>
+                                    <constraint firstAttribute="height" constant="30" id="DtN-SJ-9kA"/>
                                 </constraints>
                                 <connections>
                                     <action selector="sliderAction:" destination="dwu-BN-XnB" eventType="valueChanged" id="2Ck-z9-o45"/>
@@ -40,9 +39,11 @@
                         <viewLayoutGuide key="safeArea" id="5sw-fU-xkA"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="UBI-7h-ynB" firstAttribute="centerX" secondItem="RUZ-IE-Z8H" secondAttribute="centerX" id="Jc8-Gc-stt"/>
+                            <constraint firstItem="UBI-7h-ynB" firstAttribute="top" secondItem="YM5-wv-rPA" secondAttribute="bottom" constant="30" id="V93-rE-GCq"/>
                             <constraint firstItem="YM5-wv-rPA" firstAttribute="centerX" secondItem="RUZ-IE-Z8H" secondAttribute="centerX" id="VzZ-6g-9Rb"/>
-                            <constraint firstItem="UBI-7h-ynB" firstAttribute="top" secondItem="YM5-wv-rPA" secondAttribute="bottom" constant="30" id="qGz-uo-50O"/>
+                            <constraint firstItem="UBI-7h-ynB" firstAttribute="leading" secondItem="5sw-fU-xkA" secondAttribute="leading" constant="40" id="wo3-ui-mVl"/>
+                            <constraint firstItem="UBI-7h-ynB" firstAttribute="centerX" secondItem="RUZ-IE-Z8H" secondAttribute="centerX" id="xGs-GK-jFN"/>
+                            <constraint firstItem="5sw-fU-xkA" firstAttribute="trailing" secondItem="UBI-7h-ynB" secondAttribute="trailing" constant="40" id="xOP-9x-Sa2"/>
                             <constraint firstItem="YM5-wv-rPA" firstAttribute="top" secondItem="5sw-fU-xkA" secondAttribute="top" constant="30" id="zB2-d6-Zub"/>
                         </constraints>
                     </view>
@@ -76,10 +77,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5B-ug-ABF">
-                                <rect key="frame" x="20" y="134" width="374" height="31"/>
+                                <rect key="frame" x="38" y="134" width="338" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1Pt-eY-FfK"/>
-                                    <constraint firstAttribute="width" constant="370" id="q8s-eR-kOl"/>
+                                    <constraint firstAttribute="height" constant="30" id="7KY-EB-YpM"/>
                                 </constraints>
                                 <connections>
                                     <action selector="sliderAction:" destination="tsD-ef-O7I" eventType="valueChanged" id="Wlz-sO-GxY"/>
@@ -89,10 +89,12 @@
                         <viewLayoutGuide key="safeArea" id="nBx-Cs-Jgp"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstItem="Z5B-ug-ABF" firstAttribute="centerX" secondItem="Rcs-1a-sXl" secondAttribute="centerX" id="0Ka-c1-Qhr"/>
+                            <constraint firstItem="Z5B-ug-ABF" firstAttribute="centerX" secondItem="Rcs-1a-sXl" secondAttribute="centerX" id="BOh-uk-uC0"/>
                             <constraint firstItem="TzT-AO-szR" firstAttribute="top" secondItem="nBx-Cs-Jgp" secondAttribute="top" constant="30" id="EH7-m3-DYM"/>
                             <constraint firstItem="TzT-AO-szR" firstAttribute="centerX" secondItem="Rcs-1a-sXl" secondAttribute="centerX" id="P3n-At-ldf"/>
-                            <constraint firstItem="Z5B-ug-ABF" firstAttribute="top" secondItem="TzT-AO-szR" secondAttribute="bottom" constant="30" id="gIm-dG-SQ0"/>
+                            <constraint firstItem="nBx-Cs-Jgp" firstAttribute="trailing" secondItem="Z5B-ug-ABF" secondAttribute="trailing" constant="40" id="S1E-3z-j5k"/>
+                            <constraint firstItem="Z5B-ug-ABF" firstAttribute="top" secondItem="TzT-AO-szR" secondAttribute="bottom" constant="30" id="Tbj-x2-Rm1"/>
+                            <constraint firstItem="Z5B-ug-ABF" firstAttribute="leading" secondItem="nBx-Cs-Jgp" secondAttribute="leading" constant="40" id="opO-nv-GIC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Red" id="6C0-ea-cRn"/>
