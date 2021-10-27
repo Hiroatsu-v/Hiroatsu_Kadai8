@@ -11,17 +11,25 @@ class RedViewController: UIViewController {
     @IBOutlet private weak var numberLabel: UILabel!
     @IBOutlet private weak var slider: UISlider!
 
-    // swiftlint:disable:next force_cast weak_delegate
-    private var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var sharedValue: Float {
+        get {
+            // swiftlint:disable:next force_cast
+            (UIApplication.shared.delegate as! AppDelegate).sharedValue
+        }
+        set {
+            // swiftlint:disable:next force_cast
+            (UIApplication.shared.delegate as! AppDelegate).sharedValue = newValue
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        slider.value = appDelegate.sharedValue
-        numberLabel.text = String(appDelegate.sharedValue)
+        slider.value = sharedValue
+        numberLabel.text = String(sharedValue)
     }
 
     @IBAction private func sliderAction(_ sender: Any) {
         numberLabel.text = String(slider.value)
-        appDelegate.sharedValue = slider.value
+        sharedValue = slider.value
     }
 }
