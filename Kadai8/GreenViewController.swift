@@ -10,18 +10,23 @@ import UIKit
 class GreenViewController: UIViewController {
     @IBOutlet private weak var numberLabel: UILabel!
     @IBOutlet private weak var slider: UISlider!
-    private weak var delegate = UIApplication.shared.delegate as? AppDelegate
-
+    var sharedValue: Float {
+        get {
+            // swiftlint:disable:next force_cast
+            (UIApplication.shared.delegate as! AppDelegate).sharedValue
+        }
+        set {
+            // swiftlint:disable:next force_cast
+            (UIApplication.shared.delegate as! AppDelegate).sharedValue = newValue
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let slidervalue = delegate?.sharedSliderValue else { return }
-        slider.value = slidervalue
-        numberLabel.text = String(delegate!.sharedSliderValue)
+        slider.value = sharedValue
+        numberLabel.text = String(sharedValue)
     }
-
     @IBAction private func sliderAction(_ sender: Any) {
-        let sliderValue = slider.value
-        numberLabel.text = String(sliderValue)
-        delegate!.sharedSliderValue = sliderValue
+        numberLabel.text = String(slider.value)
+        sharedValue = slider.value
     }
 }
